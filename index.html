@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildan Soleh | Creative Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-cream font-sans overflow-x-hidden bg-main">
+
+    <div id="progress" class="scroll-progress"></div>
+
+    <nav class="fixed w-full z-50 border-b border-cream/5 bg-charcoal/80 backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="font-serif italic text-2xl text-accent-bright tracking-tight">W. Soleh</span>
+            <div class="hidden md:flex gap-10 text-xs uppercase tracking-[0.3em] items-center">
+                <a href="#about" class="hover:text-accent transition duration-300">About</a>
+                <a href="#experience" class="hover:text-accent transition duration-300">Experience</a>
+                <a href="#hobbies" class="hover:text-accent transition duration-300">Hobbies</a>
+                <a href="#projects" class="group relative px-6 py-2 overflow-hidden border border-accent text-accent transition-all duration-300 hover:text-charcoal rounded-full">
+                    <span class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 bg-accent group-hover:h-full -z-10"></span>
+                    PROJECTS
+                </a>
+            </div>
+            <button id="menu-toggle" class="md:hidden text-accent p-2">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-charcoal z-[60] flex flex-col items-center justify-center gap-8 md:hidden pointer-events-none">
+            <button id="menu-close" class="absolute top-6 right-6 text-accent">
+                <i data-lucide="x"></i>
+            </button>
+            <a href="#about" class="mobile-link text-2xl font-serif italic">About</a>
+            <a href="#experience" class="mobile-link text-2xl font-serif italic">Experience</a>
+            <a href="#hobbies" class="mobile-link text-2xl font-serif italic">Hobbies</a>
+            <a href="#projects" class="mobile-link text-2xl font-serif italic text-accent border border-accent px-8 py-2 rounded-full">Projects</a>
+        </div>
+    </nav>
+
+    <header class="min-h-screen pt-40 pb-20 px-6 max-w-7xl mx-auto flex flex-col justify-center relative">
+        <div class="absolute inset-0 opacity-[0.02] grid grid-cols-12 gap-4 -z-10">
+            <div class="border-r border-cream"></div><div class="border-r border-cream"></div><div class="border-r border-cream"></div><div class="border-r border-cream"></div>
+            <div class="border-r border-cream"></div><div class="border-r border-cream"></div><div class="border-r border-cream"></div><div class="border-r border-cream"></div>
+            <div class="border-r border-cream"></div><div class="border-r border-cream"></div><div class="border-r border-cream"></div><div class="border-r border-cream"></div>
+        </div>
+
+        <div class="reveal grid md:grid-cols-2 items-center gap-16">
+            <div>
+                <h1 class="font-serif text-7xl md:text-[140px] font-black mb-10 leading-[0.85] tracking-tighter text-shine">
+                    Wildan <br> <span class="italic">Soleh.</span>
+                </h1>
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="h-px w-20 bg-accent"></div>
+                    <p class="text-xl md:text-2xl uppercase tracking-[0.25em] text-cream/80">Information Systems Student</p>
+                </div>
+                <p class="text-cream/60 max-w-xl text-lg">Focusing on HCI, Web Technologies, and Creative Development at Universitas Komputama Cilacap.</p>
+            </div>
+            
+            <div class="hidden md:flex justify-end relative">
+                <div class="relative w-[380px] h-[520px] floating border border-accent/20 rounded-full p-6 group backdrop-blur-sm bg-charcoal/30">
+                    <div class="absolute inset-4 rounded-full border border-accent/60 opacity-50 group-hover:scale-105 transition-transform duration-700"></div>
+                    <div class="w-full h-full rounded-full overflow-hidden border-2 border-accent grayscale group-hover:grayscale-0 transition duration-1000">
+                        <img src="https://i.ibb.co.com/1JZyd3Bp/IMG-20260404-WA0022.jpg" alt="Wildan Soleh" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition duration-1000">
+                    </div>
+                    <div class="absolute -bottom-6 -left-8 bg-accent text-charcoal px-8 py-3 font-serif italic text-xl -rotate-12 shadow-xl border border-charcoal/20 z-10">
+                        Creative Dev
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 relative z-10">
+        <section id="about" class="py-32 border-t border-cream/5 reveal">
+            </section>
+        
+        </main>
+
+    <footer class="max-w-7xl mx-auto px-6 pb-20 relative z-10 text-center">
+        <div class="mt-20 text-cream/20 text-xs tracking-widest uppercase">
+            &copy; 2026 Wildan Soleh. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
