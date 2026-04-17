@@ -1,0 +1,71 @@
+/* Custom Base Styles */
+.bg-main {
+    background: linear-gradient(180deg, #0d0d0d 0%, #05161a 50%, #072e33 100%);
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+    z-index: 9999;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1a1c1e; }
+::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 10px; }
+
+/* Progress Bar */
+.scroll-progress {
+    height: 3px;
+    background: linear-gradient(to right, #d4af37, #f4f1ea);
+    position: fixed;
+    top: 0; left: 0; z-index: 100; width: 0%;
+    transition: width 0.1s ease-out;
+}
+
+/* Animations & Transitions */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-shine {
+    background: linear-gradient(to right, #d4af37 20%, #f4f1ea 40%, #f4f1ea 60%, #d4af37 80%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+    to { background-position: 200% center; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.floating { animation: float 6s ease-in-out infinite; }
+
+/* Mobile Menu */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+#mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+}
